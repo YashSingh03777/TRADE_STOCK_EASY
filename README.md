@@ -1,4 +1,4 @@
- @Trade_Easy
+<H2> TRADE_EASY </H2>  
 
 Trade Easy is a cutting-edge stock trading platform engineered to reduce brokerage fees using machine learning models. In the stock market, brokerage fees significantly impact overall profitability, especially for high-frequency traders. Trade Easy applies advanced data-driven techniques to analyze trading patterns and optimize trade execution, thus minimizing brokerage costs without sacrificing trading performance.
 
