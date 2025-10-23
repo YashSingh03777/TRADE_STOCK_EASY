@@ -1,0 +1,89 @@
+/* Container */
+.live-data-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+/* Heading */
+.live-data-container h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #474747;
+  margin-bottom: 20px;
+}
+
+/* Symbol input and button */
+.symbol-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.symbol-control input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.symbol-control input:focus {
+  border-color: #4184f3;
+  box-shadow: 0 0 5px rgba(65, 132, 243, 0.4);
+}
+
+.symbol-control button {
+  padding: 10px 16px;
+  background-color: #4184f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.symbol-control button:hover {
+  background-color: #74a7fa;
+}
+
+/* Chart wrapper */
+.chart-wrapper {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 6px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Loading text */
+.loading-text {
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .symbol-control {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .symbol-control button {
+    width: 100%;
+  }
+
+  .chart-wrapper {
+    padding: 15px;
+  }
+}

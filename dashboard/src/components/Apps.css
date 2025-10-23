@@ -1,0 +1,163 @@
+/* Container */
+.apps-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #e0f7fa, #f3e5f5, #ffffff);
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Card Box */
+.apps-box {
+  width: 100%;
+  max-width: 650px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  transition: transform 0.3s;
+}
+.apps-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Intro */
+.intro-section {
+  text-align: center;
+}
+.intro-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #7b5cf6; /* soft purple */
+  margin-bottom: 20px;
+}
+.intro-text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+.highlight {
+  color: #22d3ee; /* turquoise */
+  font-weight: bold;
+}
+.intro-extra {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  background: #7b5cf6;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* Step Section */
+.step-section {
+  text-align: center;
+}
+.step-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+.input-box {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  background: #fefefe;
+}
+.input-box:focus {
+  border-color: #7b5cf6;
+  box-shadow: 0 0 6px rgba(123, 92, 246, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+  background: #7b5cf6;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #6845d8;
+}
+.btn-secondary {
+  background: #f3f3f3;
+  color: #333;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
+.btn-success {
+  background: #22c55e;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-success:hover {
+  background: #16a34a;
+}
+
+/* Options */
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.option-btn {
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #fafafa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.option-btn:hover {
+  border-color: #7b5cf6;
+}
+.option-btn.selected {
+  background: #ede9fe; /* soft purple */
+  border-color: #7b5cf6;
+  font-weight: bold;
+  color: #5b21b6;
+}
+
+/* Step Buttons */
+.step-buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
