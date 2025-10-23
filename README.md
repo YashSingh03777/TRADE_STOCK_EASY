@@ -111,6 +111,3 @@ npm start
 * Provide predictive analytics dashboards for risk management.
 * Add AI-based portfolio optimization features for long-term investments.
 
----
-
-This description is ready to paste into your `README.md` file on GitHub. It is structured, professional, and highlights your **ML-powered brokerage reduction feature** clearly.
