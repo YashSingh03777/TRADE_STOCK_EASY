@@ -36,7 +36,7 @@ function Team() {
 
             <div className='row p-5 border-top'>
                 <div className='col-6'>
-                    <img src='media/images/media/' alt=' vanshita image' style={{ width: "40%", borderRadius: "100%" }} />
+                    <img src='media/images/media/VanshitaPanchal.jpg' alt=' vanshita image' style={{ width: "40%", borderRadius: "100%" }} />
                 </div>
 
                 <div className='col-6 text-muted fs-7'>
