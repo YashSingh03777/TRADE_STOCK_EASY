@@ -117,11 +117,24 @@ const Menu = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
+  // const handleLogout = () => {
+  //   localStorage.clear();
+  //   sessionStorage.clear();
+  //   window.location.href = "http://localhost:3001";
+  // };
+
   const handleLogout = () => {
-    localStorage.clear();
-    sessionStorage.clear();
-    window.location.href = "http://localhost:3001";
-  };
+  localStorage.clear();
+  sessionStorage.clear();
+
+  const frontendURL =
+    window.location.hostname === "localhost"
+      ? "http://localhost:3001"
+      : "https://tradefrontend.onrender.com";
+
+  window.location.href = frontendURL;
+};
+
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
