@@ -503,6 +503,19 @@ app.get("/api/holdings", async (req, res) => {
 });
 
 
+// ✅ Fetch all holdings (basic route)
+app.get("/api/holdings", async (req, res) => {
+  try {
+    const holdings = await HoldingModel.find({});
+    res.json(holdings);
+  } catch (err) {
+    console.error("Error fetching holdings:", err);
+    res.status(500).json({ error: "Server error", details: err.message });
+  }
+});
+
+
+
 app.listen(PORT, () => {
     console.log("Server is running yet...");
     mongoose.connect(uri);

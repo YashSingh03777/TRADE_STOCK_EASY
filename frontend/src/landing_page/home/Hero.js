@@ -10,7 +10,11 @@ function Hero() {
        <button
   className="p-1 btn btn-primary fs-6 mb-5"
   style={{ width: "30%", margin: "0 auto" }}
-  onClick={() => window.location.href = 'http://localhost:3001/signup'}
+  onClick={() => window.location.href = 
+  // 'http://localhost:3001/signup'}
+
+  // DEPLOYED URL 
+  `https://tradebackend-pc2r.onrender.com`}
 >
   Signup Now
 </button>

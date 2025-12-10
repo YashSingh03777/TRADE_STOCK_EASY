@@ -127,10 +127,16 @@ const Holdings = () => {
   const [intradayData, setIntradayData] = useState({});
   const [loadingChart, setLoadingChart] = useState(true);
 
+  const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+
   // ---------------- Fetch all holdings ----------------
   const fetchHoldings = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/api/holdings/live");
+      // const res = await axios.get("http://localhost:3002/api/holdings/live");
+
+      // deployed code 
+      const res = await axios.get(`${BASE_URL}/api/holdings/live`);
+
       setAllHoldings(res.data);
 
       // Fetch intraday for first stock
@@ -150,7 +156,10 @@ const Holdings = () => {
   const fetchIntraday = async (symbol) => {
     try {
       const resp = await axios.get(
-        `http://localhost:3002/api/intraday?symbol=${symbol}&interval=5min`
+        // `http://localhost:3002/api/intraday?symbol=${symbol}&interval=5min`
+
+        // deployed code 
+        `${BASE_URL}/api/intraday?symbol=${symbol}&interval=5min`
       );
       const ts = resp.data.normalizedTimeSeries || resp.data["Time Series (5min)"] || {};
       setIntradayData(ts);
@@ -168,7 +177,11 @@ const Holdings = () => {
   // ---------------- Buy/Sell updates ----------------
   const handleBuy = async (stock) => {
   try {
-    await axios.post("http://localhost:3002/api/buy", {
+    // await axios.post("http://localhost:3002/api/buy",
+
+    // deployed code 
+    await axios.post(`${BASE_URL}/api/buy`,
+       {
       symbol: stock.name,
       qty: 1,
     });
@@ -181,7 +194,11 @@ const Holdings = () => {
 
 const handleSell = async (stock) => {
   try {
-    await axios.post("http://localhost:3002/api/sell", {
+    // await axios.post("http://localhost:3002/api/sell", 
+
+      //deployed code 
+      await axios.post(`${BASE_URL}/api/sell`,
+      {
       symbol: stock.name,
       qty: 1,
     });

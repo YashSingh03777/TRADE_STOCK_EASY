@@ -117,7 +117,11 @@ function Signup() {
     try {
       if (isLogin) {
         // Login flow
-        const res = await axios.post("http://localhost:3002/api/auth/login", {
+        // const res = await axios.post("http://localhost:3002/api/auth/login",
+          
+          // DEPLOYED URL 
+          const res = await axios.post(`https://tradebackend-pc2r.onrender.com/api/auth/login`,
+          {
           email: formData.email,
           password: formData.password,
         });
@@ -133,7 +137,10 @@ function Signup() {
 
       } else {
         // Signup flow
-        await axios.post("http://localhost:3002/api/auth/signup", formData);
+        // await axios.post("http://localhost:3002/api/auth/signup", formData);
+
+        //DEPLOYED URL
+         await axios.post(`https://tradebackend-pc2r.onrender.com/api/auth/signup`, formData);
         setMessage("Signup successful! You can now login.");
         setFormData({ username: "", email: "", password: "" });
         setIsLogin(true); // Switch to login after signup

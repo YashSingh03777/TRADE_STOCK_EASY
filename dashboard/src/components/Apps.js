@@ -202,6 +202,9 @@ import axios from "axios";
 import StockChart from "./ChartRef"; // Import chart component here
 import "./Apps.css";
 
+
+
+
 const Apps = () => {
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({
@@ -256,7 +259,10 @@ const Apps = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3002/api/form/submit",
+        // "http://localhost:3002/api/form/submit",
+        
+        // DEPLOYED CODE 
+        "https://tradebackend-pc2r.onrender.com/api/form/submit",
         formData
       );
       setSuccessMsg(response.data.message || "✅ Information saved successfully.");

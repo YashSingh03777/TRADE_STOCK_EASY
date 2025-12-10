@@ -85,8 +85,10 @@ const Orders = () => {
   const fetchOrders = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("http://localhost:3002/allOrders");
-        // const response = await axios.get(`$(BASE_URL)/allOrders`);
+      // const response = await axios.get("http://localhost:3002/allOrders");
+      
+      // deployed code 
+      const response = await axios.get( `${process.env.REACT_APP_BACKEND_URL}/allOrders`);
       setOrders(response.data);
     } catch (error) {
       console.error("Error fetching orders:", error);

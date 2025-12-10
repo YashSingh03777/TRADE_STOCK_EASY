@@ -66,6 +66,7 @@ import axios from "axios";
 
 const REFRESH_INTERVAL = 30000; // Every 30 seconds
 const HIGHLIGHT_DURATION = 3000;
+ const BASE_URL = process.env.REACT_APP_BACKEND_URL;
 
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
@@ -76,8 +77,10 @@ const Positions = () => {
 
   const fetchPositions = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/allPositions");
-      // const res = await axios.get(`${BASE_URL}/allPositions`);
+      // const res = await axios.get("http://localhost:3002/allPositions");
+
+      //deployed code 
+       const res = await axios.get(`${BASE_URL}/allPositions`);
       const backendPositions = res.data;
 
       const liveMap = window.livePriceMap || {};
@@ -118,7 +121,11 @@ const Positions = () => {
 
   const notifyBackendAutoSell = async (stock) => {
     try {
-      await axios.post("http://localhost:3002/autoSellTrigger", {
+      // await axios.post("http://localhost:3002/autoSellTrigger", 
+
+      // deployed code 
+      await axios.post(`${BASE_URL}/autoSellTrigger`,
+        {
         name: stock.name,
         targetPrice: autoSellTargets[stock.name],
         currentPrice: stock.price,

@@ -5,6 +5,8 @@ import axios from "axios";
 import { VerticalGraph } from "./VerticalGraph";
 import "./LiveData.css";
 
+const BASE_URL = "https://tradebackend-pc2r.onrender.com";
+
 const LiveData = () => {
   const [symbol, setSymbol] = useState("IBM");
   const [intradayData, setIntradayData] = useState({});
@@ -16,9 +18,9 @@ const LiveData = () => {
     setLoading(true);
 
     axios
-       .get(`http://localhost:3002/api/intraday?symbol=${symbol}&interval=5min`)  //these is the code of local system 
+      //  .get(`http://localhost:3002/api/intraday?symbol=${symbol}&interval=5min`)  //these is the code of local system 
 
-      // .get(`${BASE_URL}/api/intraday?symbol=${symbol}&interval=5min`)
+       .get(`${BASE_URL}/api/intraday?symbol=${symbol}&interval=5min`)
 
       .then((res) => {
         const ts =
