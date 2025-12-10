@@ -16,7 +16,10 @@ const LiveData = () => {
     setLoading(true);
 
     axios
-      .get(`http://localhost:3002/api/intraday?symbol=${symbol}&interval=5min`)
+       .get(`http://localhost:3002/api/intraday?symbol=${symbol}&interval=5min`)  //these is the code of local system 
+
+      // .get(`${BASE_URL}/api/intraday?symbol=${symbol}&interval=5min`)
+
       .then((res) => {
         const ts =
           res.data.normalizedTimeSeries || res.data["Time Series (5min)"] || {};

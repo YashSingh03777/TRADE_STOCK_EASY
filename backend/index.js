@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 
-const appindex = require("../Server/appindex");
+const appindex = require("../Server/appindex");  // server backend connectivity 
 
 
 const express = require("express");
@@ -339,10 +339,6 @@ app.get("/api/form/submissions", async (req, res) => {
 
 
 
-
-
-
-
 app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingModel.find({});
   res.json(allHoldings);
@@ -491,6 +487,17 @@ app.get("/api/intraday", async (req, res) => {
 
   } catch (err) {
     console.error("Intraday API error:", err.message);
+    res.status(500).json({ error: "Server error", details: err.message });
+  }
+});
+
+// ✅ Fetch all holdings (basic route)
+app.get("/api/holdings", async (req, res) => {
+  try {
+    const holdings = await HoldingModel.find({});
+    res.json(holdings);
+  } catch (err) {
+    console.error("Error fetching holdings:", err);
     res.status(500).json({ error: "Server error", details: err.message });
   }
 });

@@ -17,6 +17,19 @@ const BuyActionWindow = ({ uid, type, onClose }) => {
         mode: type, // "BUY" or "SELL"
       });
 
+
+// these the deployment code of the render.com ok
+  //   try {
+  // const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
+  // await axios.post(`${BASE_URL}/newOrder`, {
+  //   name: uid,
+  //   qty: Number(stockQuantity),
+  //   price: Number(stockPrice),
+  //   mode: type, // "BUY" or "SELL"
+  // });
+
+
       onClose(); // Close popup after successful order
     } catch (err) {
       console.error("Order failed:", err);

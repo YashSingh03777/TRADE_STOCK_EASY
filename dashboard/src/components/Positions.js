@@ -77,6 +77,7 @@ const Positions = () => {
   const fetchPositions = async () => {
     try {
       const res = await axios.get("http://localhost:3002/allPositions");
+      // const res = await axios.get(`${BASE_URL}/allPositions`);
       const backendPositions = res.data;
 
       const liveMap = window.livePriceMap || {};

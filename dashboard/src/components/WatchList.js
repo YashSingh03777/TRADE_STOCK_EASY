@@ -289,6 +289,7 @@ const WatchListItem = ({ stock }) => {
   const handleBuy = async () => {
     try {
       await axios.post("http://localhost:3002/api/buy", { symbol: stock.name, qty: 1 });
+      //  await axios.post(`${BASE_URL}/api/buy`, { symbol: stock.name, qty: 1 });
       alert(`${stock.name} bought successfully!`);
     } catch (err) {
       console.error("Buy error:", err);
@@ -299,6 +300,7 @@ const WatchListItem = ({ stock }) => {
   const handleSell = async () => {
     try {
       await axios.post("http://localhost:3002/api/sell", { symbol: stock.name, qty: 1 });
+      // await axios.post(`${BASE_URL}/api/sell`, { symbol: stock.name, qty: 1 });
       alert(`${stock.name} sold successfully!`);
     } catch (err) {
       console.error("Sell error:", err);
