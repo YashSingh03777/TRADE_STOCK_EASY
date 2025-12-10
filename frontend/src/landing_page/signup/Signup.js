@@ -133,7 +133,7 @@ function Signup() {
         // Redirect to dashboard app (port 3000)
         setTimeout(() => {
           // window.location.href = "http://localhost:3000";
-          //DEPLOYED URL 
+          //DEPLOYED URL of dashboard access 
            window.location.href = `https://trade-dashboard-36vd.onrender.com`;
         }, 1500);
 
