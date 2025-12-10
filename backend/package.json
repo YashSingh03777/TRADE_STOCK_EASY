@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "nodemon index.js"   
-=======
     "start": "node index.js",
     "dev": "nodemon index.js"
->>>>>>> b1b85a18a633b3372a9c032b4b0a19c0abf10ab2
   },
   "keywords": [],
   "author": "Yash Singh",
